@@ -1,8 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './Menu-item.scss';
 
-const MenuItem = ({ title, imageUrl, size }) => (
-  <div className={`${size} menu-item`}>
+// history, match: higher order props by withRouter
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
+  <div
+    className={`${size} menu-item`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
+  >
     {/* To scale for only background image */}
     <div
       className='background-image'
@@ -17,4 +22,4 @@ const MenuItem = ({ title, imageUrl, size }) => (
   </div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);

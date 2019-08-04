@@ -24,7 +24,8 @@ $ yarn start
 ## Tools
 
 - Create-react-app cli
-- SASS
+- SCSS
+- React Router v5
 
 ## Licence
 
