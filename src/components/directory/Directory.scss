@@ -1,0 +1,8 @@
+.directory-menu {
+  width: 100%;
+  // To row
+  display: flex;
+  // Make space
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

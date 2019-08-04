@@ -6,7 +6,7 @@ eCommerce clothing website
 
 **_DEMO:_**
 
-<img src="./src/img/progress/190804HomePage.jpg" width="80%">
+<img src="./src/img/progress/190804 (2) HomePage.jpg" width="80%">
 
 ## Usage / Install
 
