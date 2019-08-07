@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import CollectionItem from '../collectionItem/CollectionItem';
 import './CollectionPreview.scss';
 
