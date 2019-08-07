@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import './Menu-item.scss';
+import './MenuItem.scss';
 
 // history, match: higher order props by withRouter
 const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
