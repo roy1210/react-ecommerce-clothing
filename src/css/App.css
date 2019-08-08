@@ -7,3 +7,9 @@ a {
   text-decoration: none;
   color: black;
 }
+
+/* To fix border size same as button size in signin page */
+/* Elements will be same line because the padding and margin and the border do not affect the element(other) size */
+* {
+  box-sizing: border-box;
+}

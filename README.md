@@ -26,6 +26,8 @@ $ yarn start
 - Create-react-app cli
 - SCSS
 - React Router v5
+- Firebase (Google OAuth)
+- Firestore
 
 ## Licence
 
