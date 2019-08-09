@@ -1,11 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
-// import {auth} from
 
-import './Header.scss';
 // {ReactComponent as Logo}: Special components as `Logo` keyword
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+import './Header.scss';
 
 const Header = ({ currentUser }) => {
   return (
@@ -30,4 +30,9 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+// state: root reducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(Header);

@@ -20,7 +20,7 @@ export const createUserProfileDocument = async (userAuth, AdditionalData) => {
   // Document ref >> DocumentSnapshot: .get(), .set(), .update(), .delete
   const snapShot = await userRef.get();
 
-  // !snapShot.exist: If data is not exist => Add in collection
+  // !snapShot.exist: If data is not exist => User haven't sign up yet => Add in collection
   // Collection ref >> querySnapshot: .add(), .get()
   if (!snapShot.exist) {
     const { displayName, email } = userAuth;

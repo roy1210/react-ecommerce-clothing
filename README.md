@@ -28,6 +28,8 @@ $ yarn start
 - React Router v5
 - Firebase (Google OAuth)
 - Firestore
+- Redux
+- Redux logger
 
 ## Licence
 
