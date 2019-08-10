@@ -1,5 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { Link } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.utils';
 
@@ -36,12 +39,10 @@ const Header = ({ currentUser, hidden }) => {
 
 // args: complex destructuring
 // Redux: Json format
-// ({ user: { currentUser }, cart: { hidden } }): Way to connect nested value.
-// user => currentUser, cart => hidden
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  // currentUser: state.user.currentUser // If args only `state`
-  currentUser,
-  hidden
+// createStructuredSelector: Use with more than 1 states toProps. Automatically pass the `state`
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(Header);
