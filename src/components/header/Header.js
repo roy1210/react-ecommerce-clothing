@@ -9,7 +9,7 @@ import './Header.scss';
 import CartIcon from '../cartIcon/CartIcon';
 import CartDropdown from '../cartDropdown/CartDropdown';
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
   return (
     <div className='header'>
       <Link className='logo-container' to='/'>
@@ -29,14 +29,19 @@ const Header = ({ currentUser }) => {
         )}
         <CartIcon />
       </div>
-      <CartDropdown />
+      {hidden ? null : <CartDropdown />}
     </div>
   );
 };
 
-// state: root reducer
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+// args: complex destructuring
+// Redux: Json format
+// ({ user: { currentUser }, cart: { hidden } }): Way to connect nested value.
+// user => currentUser, cart => hidden
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  // currentUser: state.user.currentUser // If args only `state`
+  currentUser,
+  hidden
 });
 
 export default connect(mapStateToProps)(Header);
