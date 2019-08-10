@@ -30,6 +30,7 @@ $ yarn start
 - Firestore
 - Redux
 - Redux logger
+- Reselect
 
 ## Licence
 
