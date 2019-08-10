@@ -10,9 +10,10 @@ const CollectionPreview = ({ title, items }) => {
         {items
           // Only show 4 item which index# 0~3
           .filter((item, i) => i > 4)
-          //id: === item.id
-          .map(({ id, ...otherItemProps }) => (
-            <CollectionItem key={id} {...otherItemProps} />
+          // .map(({ id, ...otherItemProps }) => (
+          // <CollectionItem key={id} {...otherItemProps} />
+          .map(item => (
+            <CollectionItem key={item.id} item={item} />
           ))}
       </div>
     </div>
