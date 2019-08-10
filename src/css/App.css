@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans Condensed';
-  padding: 20px 60px
+  padding: 20px 40px
 }
 
 a {
@@ -8,7 +8,7 @@ a {
   color: black;
 }
 
-/* To fix border size same as button size in signin page */
+/* To fix border size same as button size in sign in page */
 /* Elements will be same line because the padding and margin and the border do not affect the element(other) size */
 * {
   box-sizing: border-box;

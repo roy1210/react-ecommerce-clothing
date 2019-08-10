@@ -6,6 +6,8 @@ import { auth } from '../../firebase/firebase.utils';
 // {ReactComponent as Logo}: Special components as `Logo` keyword
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './Header.scss';
+import CartIcon from '../cartIcon/CartIcon';
+import CartDropdown from '../cartDropdown/CartDropdown';
 
 const Header = ({ currentUser }) => {
   return (
@@ -25,7 +27,9 @@ const Header = ({ currentUser }) => {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };
