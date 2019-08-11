@@ -29,8 +29,9 @@ $ yarn start
 - Firebase (Google OAuth)
 - Firestore
 - Redux
-- Redux logger
-- Reselect
+- Redux-logger: Logging every actions
+- Reselect: To update states for only affected states
+- Redux-persist: To cash data in local storage
 
 ## Licence
 
