@@ -1,20 +1,34 @@
 import React from 'react';
 import CustomButton from '../customButton/CustomButton';
-import './CartDropdown.scss';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import CartItem from '../cartItem/CartItem';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { createStructuredSelector } from 'reselect';
+import { toggleCartHidden } from '../../redux/cart/cart.action';
+import './CartDropdown.scss';
 
-const CartDropdown = ({ cartItems }) => {
+const CartDropdown = ({ cartItems, history, dispatch }) => {
   return (
     <div className='cart-dropdown'>
       <div className='cart-items'>
-        {cartItems.map(cartItem => (
-          <CartItem key={cartItem.id} item={cartItem} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map(cartItem => (
+            <CartItem key={cartItem.id} item={cartItem} />
+          ))
+        ) : (
+          <span className='empty-message'>Your cart is empty</span>
+        )}
       </div>
-      <CustomButton>Go TO CHECKOUT</CustomButton>
+      {/* `history.push` instead of `<Link>` because using `<CustomButton>` */}
+      <CustomButton
+        onClick={() => {
+          history.push('/checkout');
+          dispatch(toggleCartHidden());
+        }}
+      >
+        Go TO CHECKOUT
+      </CustomButton>
     </div>
   );
 };
@@ -23,4 +37,5 @@ const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems
 });
 
-export default connect(mapStateToProps)(CartDropdown);
+// Work even not writing `mapDispatchToProps` because `connect` automatically pass the `dispatch` if there is no second args in `connect`.
+export default withRouter(connect(mapStateToProps)(CartDropdown));

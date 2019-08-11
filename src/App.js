@@ -12,6 +12,7 @@ import Header from './components/header/Header';
 import SignInAndSignUp from './pages/signInAndSignUp/SignInAndSignUp';
 
 import './css/App.css';
+import Checkout from './pages/checkout/Checkout';
 
 class App extends Component {
   // constructor(props) {
@@ -59,6 +60,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={Checkout} />
           <Route
             exact
             path='/signin'
