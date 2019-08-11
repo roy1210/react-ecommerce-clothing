@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
-import SHOP_DATA from './Shop.data';
-import CollectionPreview from '../../components/collectionPreview/CollectionPreview';
+import React from 'react';
+import CollectionsOverview from '../../components/collectionsOverview/CollectionsOverview';
 
-class Shop extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collections: SHOP_DATA
-    };
-  }
-  render() {
-    const { collections } = this.state;
-    return (
-      <div className='shop-page'>
-        {collections.map(({ id, ...otherCollectionProps }) => (
-          // only `key` is not same property name in key value pair. So key cannot include in `{...otherCollectionProps}`
-          <CollectionPreview key={id} {...otherCollectionProps} />
-        ))}
-      </div>
-    );
-  }
-}
+import { selectCollections } from '../../redux/shop/shop.selector';
+
+const Shop = () => {
+  return (
+    <div className='shop-page'>
+      <CollectionsOverview />
+    </div>
+  );
+};
+
 export default Shop;
