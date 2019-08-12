@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionItem from '../collectionItem/CollectionItem';
+import CollectionItem from '../collection-Item/Collection-Item';
 import './CollectionPreview.scss';
 
 const CollectionPreview = ({ title, items }) => {
