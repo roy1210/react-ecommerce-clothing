@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './Collection.scss';
 import { selectCollection } from '../../redux/shop/shop.selectors';
-import CollectionItem from '../../components/collection-item/CollectionItem';
+import CollectionProduct from '../../components/collection-product/CollectionProduct';
 
 const Collection = ({ collection }) => {
   // const Collection = ({ match }) => {
@@ -17,7 +17,7 @@ const Collection = ({ collection }) => {
       <h2 className='title'>{title}</h2>
       <div className='items'>
         {items.map(item => (
-          <CollectionItem key={item.id} item={item} />
+          <CollectionProduct key={item.id} item={item} />
         ))}
       </div>
     </div>

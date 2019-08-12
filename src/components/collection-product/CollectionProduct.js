@@ -1,10 +1,12 @@
+// Changed name from CollectionItem to CollectionProduct due to build error when deploying
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 import CustomButton from '../custom-button/CustomButton';
-import './CollectionItem.scss';
+import './CollectionProduct.scss';
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionProduct = ({ item, addItem }) => {
   // to use `item` as args in `addItem`
   const { name, price, imageUrl } = item;
   return (
@@ -28,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps
-)(CollectionItem);
+)(CollectionProduct);

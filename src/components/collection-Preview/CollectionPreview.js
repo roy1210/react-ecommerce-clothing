@@ -1,5 +1,5 @@
 import React from 'react';
-import CollectionItem from '../collection-item/CollectionItem';
+import CollectionProduct from '../collection-product/CollectionProduct';
 import './CollectionPreview.scss';
 
 const CollectionPreview = ({ title, items }) => {
@@ -13,7 +13,7 @@ const CollectionPreview = ({ title, items }) => {
           // .map(({ id, ...otherItemProps }) => (
           // <CollectionItem key={id} {...otherItemProps} />
           .map(item => (
-            <CollectionItem key={item.id} item={item} />
+            <CollectionProduct key={item.id} item={item} />
           ))}
       </div>
     </div>
