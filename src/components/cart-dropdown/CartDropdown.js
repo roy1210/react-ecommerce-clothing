@@ -1,8 +1,8 @@
 import React from 'react';
-import CustomButton from '../customButton/CustomButton';
+import CustomButton from '../custom-button/CustomButton';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import CartItem from '../cartItem/CartItem';
+import CartItem from '../cart-item/CartItem';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { createStructuredSelector } from 'reselect';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';

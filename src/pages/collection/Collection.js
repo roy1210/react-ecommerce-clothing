@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './Collection.scss';
 import { selectCollection } from '../../redux/shop/shop.selectors';
-import CollectionItem from '../../components/collection-Item/Collection-Item';
+import CollectionItem from '../../components/collection-item/CollectionItem';
 
 const Collection = ({ collection }) => {
   // const Collection = ({ match }) => {

@@ -6,10 +6,10 @@ import {
   selectCartTotal
 } from '../../redux/cart/cart.selectors';
 
-import CheckoutItem from '../../components/checkoutItem/CheckoutItem';
+import CheckoutItem from '../../components/checkout-item/CheckoutItem';
 
 import './Checkout.scss';
-import StripeButton from '../../components/stripeButton/StripeButton';
+import StripeButton from '../../components/stripe-button/StripeButton';
 
 const Checkout = ({ cartItems, total }) => {
   return (
