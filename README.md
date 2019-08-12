@@ -37,7 +37,7 @@ $ yarn start
 - Redux-logger: Logging every actions
 - Reselect: To update states for only affected states
 - Redux-persist: To cash data in local storage
-- React-stripe-checkout 
+- React-stripe-checkout
 
 ## Licence
 

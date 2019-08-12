@@ -1,3 +1,5 @@
+// Changed name from CollectionPreview to CollectionProductPreview due to build error when deploying
+
 import React from 'react';
 import CollectionProduct from '../collection-product/CollectionProduct';
 import './CollectionProductPreview.scss';
