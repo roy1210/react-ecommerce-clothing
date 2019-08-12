@@ -1,12 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import CollectionsOverview from '../../components/collectionsOverview/CollectionsOverview';
+import Collection from '../collection/Collection';
 
-import { selectCollections } from '../../redux/shop/shop.selector';
-
-const Shop = () => {
+const Shop = ({ match }) => {
   return (
     <div className='shop-page'>
-      <CollectionsOverview />
+      <Route exact path={`${match.path}`} component={CollectionsOverview} />
+
+      {/* collectionId: parameter in url */}
+      <Route path={`${match.path}/:collectionId`} component={Collection} />
     </div>
   );
 };
