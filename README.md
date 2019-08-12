@@ -30,13 +30,14 @@ $ yarn start
 
 - Create-react-app cli
 - SCSS
+- Styled-components: Write css in JS and gives random class name to make scalable app
 - React Router v5
 - Firebase (Google OAuth)
 - Firestore
 - Redux
 - Redux-logger: Logging every actions
-- Reselect: To update states for only affected states
 - Redux-persist: To cash data in local storage
+- Reselect: To update states for only affected states
 - React-stripe-checkout
 
 ## Licence
