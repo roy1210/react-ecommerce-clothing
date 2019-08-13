@@ -12,7 +12,8 @@ export const selectCollectionsForPreview = createSelector(
 
   // Convert from object to array. (to use `.map` in `collectionsOverview`)
   // Object.keys: Convert keys to array
-  collections => Object.keys(collections).map(key => collections[key])
+  collections =>
+    collections ? Object.keys(collections).map(key => collections[key]) : []
 );
 // Curried function. This is function returns function
 // collectionUrlParam: Get from URL
@@ -20,7 +21,7 @@ export const selectCollection = collectionUrlParam =>
   createSelector(
     [selectCollections],
     // Look for state of `collections` >> state.collections.ValueOfCollectionUrlParam
-    collections => collections[collectionUrlParam]
+    collections => (collections ? collections[collectionUrlParam] : null)
   );
 
 /*

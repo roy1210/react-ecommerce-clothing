@@ -5,7 +5,6 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
-
 import HomePage from './pages/homepage/Homepage';
 import ShopPage from './pages/shop/Shop';
 import Header from './components/header/Header';
@@ -38,12 +37,14 @@ class App extends Component {
             id: snapShot.id,
             ...snapShot.data()
           });
-          console.log(this.state);
         });
-      } else {
-        // null
-        setCurrentUser(userAuth);
       }
+      // null
+      setCurrentUser(userAuth);
+      // addCollectionAndDocuments(
+      //   'collections',
+      //   collectionsArray.map(({ title, items }) => ({ title, items }))
+      // );
     });
   }
 
