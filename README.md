@@ -37,6 +37,7 @@ $ yarn start
 - Redux
 - Redux-logger: Logging every actions
 - Redux-persist: To cash data in local storage
+- Redux-thunk: Allow to fire functions
 - Reselect: To update states for only affected states
 - React-stripe-checkout
 
@@ -44,6 +45,3 @@ $ yarn start
 
 [MIT](./LICENSE.txt)
 
-## Author
-
-[Shoe Kure](https://github.com/roy1210)
